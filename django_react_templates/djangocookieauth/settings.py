@@ -126,3 +126,12 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_COOKIE_SAMESITE = 'Strict'
+SESSION_COOKIE_SAMESITE = 'Strict'
+CSRF_COOKIE_HTTPONLY = False  # False since we will grab it via universal-cookies
+SESSION_COOKIE_HTTPONLY = True
+
+# PROD ONLY
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
